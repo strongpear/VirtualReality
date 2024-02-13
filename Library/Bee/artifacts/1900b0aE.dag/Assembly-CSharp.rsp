@@ -353,11 +353,18 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/scripts/Camera/CameraMovement.cs"
+"Assets/scripts/FirstPersonMovement.cs"
+"Assets/scripts/GravityAttractor.cs"
+"Assets/scripts/GravityBody.cs"
+"Assets/scripts/Player/EyeMovement.cs"
 "Assets/scripts/Player/LightDetection.cs"
 "Assets/scripts/Player/PlayerController_RB.cs"
 "Assets/scripts/Player/playermovement.cs"
+"Assets/scripts/Player/WheelMovement.cs"
 "Assets/scripts/World/FakeGravity.cs"
 "Assets/scripts/World/FakeGravityBody.cs"
+"Assets/SC_PlanetGravity.cs"
+"Assets/SC_RigidbodyWalker.cs"
 -langversion:9.0
 
 /deterministic
