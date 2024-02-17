@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638433830509183243
-    m_Hash: 1646665576
+      ticks: 638437409607344761
+    m_Hash: 105689471
   m_LockFileStatus:
     m_FilePath: C:/Users/asapg/Documents/GitHub/VirtualReality/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638433830740352349
-    m_Hash: 1176724763
+      ticks: 638437409607354760
+    m_Hash: 1993285578
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
