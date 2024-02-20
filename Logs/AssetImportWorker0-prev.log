@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.19f1 (244b723c30a6) revision 2378610'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'en' Physical Memory: 15741 MB
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 32581 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/jlee4/Documents/classes/spring24/650/VirtualReality/VirtualReality
+C:/Users/asapg/Documents/GitHub/VirtualReality
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52122
-Successfully changed project path to: C:/Users/jlee4/Documents/classes/spring24/650/VirtualReality/VirtualReality
-C:/Users/jlee4/Documents/classes/spring24/650/VirtualReality/VirtualReality
+53503
+Successfully changed project path to: C:/Users/asapg/Documents/GitHub/VirtualReality
+C:/Users/asapg/Documents/GitHub/VirtualReality
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,68 +49,67 @@ C:/Users/jlee4/Documents/classes/spring24/650/VirtualReality/VirtualReality
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [22592] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 653731507 [EditorId] 653731507 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-VQNUIL0) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [24880] Host "[IP] 10.0.49.185 [Port] 0 [Flags] 2 [Guid] 2027349098 [EditorId] 2027349098 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-9PB1TMA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [22592] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 653731507 [EditorId] 653731507 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-VQNUIL0) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [24880] Host "[IP] 10.0.49.185 [Port] 0 [Flags] 2 [Guid] 2027349098 [EditorId] 2027349098 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-9PB1TMA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-[Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
-Refreshing native plugins compatible for Editor in 11.46 ms, found 3 plugins.
+[Physics::Module] Initialized MultithreadedJobDispatcher with 23 workers.
+Refreshing native plugins compatible for Editor in 4.24 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.19f1 (244b723c30a6)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/jlee4/Documents/classes/spring24/650/VirtualReality/VirtualReality/Assets
+[Subsystems] Discovering subsystems at path C:/Users/asapg/Documents/GitHub/VirtualReality/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: AMD Radeon(TM) Graphics (ID=0x1636)
-    Vendor:   ATI
-    VRAM:     7870 MB
-    Driver:   30.0.13023.4001
+    Renderer: NVIDIA GeForce RTX 4070 (ID=0x2786)
+    Vendor:   NVIDIA
+    VRAM:     12026 MB
+    Driver:   31.0.15.3667
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56100
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56916
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.013021 seconds.
-- Loaded All Assemblies, in  0.589 seconds
+Registered in 0.005196 seconds.
+- Loaded All Assemblies, in  0.216 seconds
 Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 460 ms
+Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.069 seconds
-Domain Reload Profiling: 1655ms
-	BeginReloadAssembly (172ms)
+- Finished resetting the current domain, in  0.161 seconds
+Domain Reload Profiling: 376ms
+	BeginReloadAssembly (67ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (59ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (96ms)
-	LoadAllAssembliesAndSetupDomain (240ms)
-		LoadAssemblies (171ms)
+		CreateAndSetChildDomain (0ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (82ms)
+		LoadAssemblies (66ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (236ms)
-			TypeCache.Refresh (233ms)
-				TypeCache.ScanAssembly (209ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (1069ms)
+		AnalyzeDomain (81ms)
+			TypeCache.Refresh (80ms)
+				TypeCache.ScanAssembly (72ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (161ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (970ms)
+		SetupLoadedEditorAssemblies (125ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (666ms)
-			SetLoadedEditorAssemblies (7ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (208ms)
-			ProcessInitializeOnLoadMethodAttributes (86ms)
+			BeforeProcessingInitializeOnLoad (1ms)
+			ProcessInitializeOnLoadAttributes (87ms)
+			ProcessInitializeOnLoadMethodAttributes (27ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,56 +117,56 @@ Domain Reload Profiling: 1655ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.087 seconds
-Refreshing native plugins compatible for Editor in 3.91 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.342 seconds
+Refreshing native plugins compatible for Editor in 1.81 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
-Native extension for Android target not found
+Native extension for WebGL target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.980 seconds
-Domain Reload Profiling: 2065ms
-	BeginReloadAssembly (257ms)
+- Finished resetting the current domain, in  0.413 seconds
+Domain Reload Profiling: 755ms
+	BeginReloadAssembly (83ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (9ms)
+		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (38ms)
-	RebuildCommonClasses (67ms)
-	RebuildNativeTypeToScriptingClass (21ms)
-	initialDomainReloadingComplete (79ms)
-	LoadAllAssembliesAndSetupDomain (660ms)
-		LoadAssemblies (498ms)
+		CreateAndSetChildDomain (11ms)
+	RebuildCommonClasses (18ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (23ms)
+	LoadAllAssembliesAndSetupDomain (211ms)
+		LoadAssemblies (165ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (314ms)
-			TypeCache.Refresh (282ms)
-				TypeCache.ScanAssembly (254ms)
-			ScanForSourceGeneratedMonoScriptInfo (25ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (981ms)
+		AnalyzeDomain (95ms)
+			TypeCache.Refresh (83ms)
+				TypeCache.ScanAssembly (74ms)
+			ScanForSourceGeneratedMonoScriptInfo (9ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (414ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (680ms)
+		SetupLoadedEditorAssemblies (331ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (38ms)
-			SetLoadedEditorAssemblies (8ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (2ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (98ms)
-			ProcessInitializeOnLoadAttributes (491ms)
-			ProcessInitializeOnLoadMethodAttributes (37ms)
-			AfterProcessingInitializeOnLoad (8ms)
+			BeforeProcessingInitializeOnLoad (33ms)
+			ProcessInitializeOnLoadAttributes (273ms)
+			ProcessInitializeOnLoadMethodAttributes (14ms)
+			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 4.35 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (4ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 1.53 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3093 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 32 unused Assets / (57.0 KB). Loaded Objects now: 3560.
-Memory consumption went from 129.1 MB to 129.0 MB.
-Total: 5.788100 ms (FindLiveObjects: 0.410500 ms CreateObjectMapping: 0.167200 ms MarkObjects: 5.026500 ms  DeleteObjects: 0.181100 ms)
+Unloading 3092 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (57.1 KB). Loaded Objects now: 3556.
+Memory consumption went from 124.5 MB to 124.4 MB.
+Total: 1.964500 ms (FindLiveObjects: 0.131300 ms CreateObjectMapping: 0.035100 ms MarkObjects: 1.715200 ms  DeleteObjects: 0.082300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -185,16 +184,16 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 525922.995542 seconds.
-  path: Assets/scripts/Camera/CameraMovement.cs
-  artifactKey: Guid(2b98c0442848dd14283dd8a9e6742069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/scripts/Camera/CameraMovement.cs using Guid(2b98c0442848dd14283dd8a9e6742069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bf04b960c49c68c0457bb4431f393af') in 0.004606 seconds
+  Time since last request: 13742.880747 seconds.
+  path: Assets/materials/RollingWorld/obstacle course/New Material.mat
+  artifactKey: Guid(d0ef3ca9b7536494da850eb60c5d9504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/materials/RollingWorld/obstacle course/New Material.mat using Guid(d0ef3ca9b7536494da850eb60c5d9504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39dbb45e37fe87548bc85e4150b43e01') in 0.065641 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-IOException: Sharing violation on path C:\Users\jlee4\Documents\classes\spring24\650\VirtualReality\VirtualReality\ProjectSettings\Packages\com.unity.testtools.codecoverage\Settings.json
+IOException: Sharing violation on path C:\Users\asapg\Documents\GitHub\VirtualReality\ProjectSettings\Packages\com.unity.testtools.codecoverage\Settings.json
   at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <bfbc89a04b6b4dd49c3614d03fc31ce8>:0 
   at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <bfbc89a04b6b4dd49c3614d03fc31ce8>:0 
   at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
@@ -207,87 +206,54 @@ IOException: Sharing violation on path C:\Users\jlee4\Documents\classes\spring24
 
 (Filename: ./Library/PackageCache/com.unity.settings-manager@2.0.1/Editor/FileSettingsRepository.cs Line: 154)
 
-- Loaded All Assemblies, in  3.342 seconds
-Refreshing native plugins compatible for Editor in 9.21 ms, found 6 plugins.
+- Loaded All Assemblies, in  0.253 seconds
+Refreshing native plugins compatible for Editor in 1.77 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-CreateSerializedAsset is not supported while importing out-of-process
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-OVRRuntimeSettings:GetRuntimeSettings () (at Assets/Oculus/VR/Scripts/OVRRuntimeSettings.cs:172)
-OVRRuntimeSettings:get_Instance () (at Assets/Oculus/VR/Scripts/OVRRuntimeSettings.cs:40)
-OVRTelemetry:get_IsActive () (at Assets/Oculus/VR/Scripts/OVRTelemetry/OVRTelemetry.cs:40)
-OVRTelemetry:get_Client () (at Assets/Oculus/VR/Scripts/OVRTelemetry/OVRTelemetry.cs:46)
-OVRTelemetryMarker:.ctor (int,int,long) (at Assets/Oculus/VR/Scripts/OVRTelemetry/OVRTelemetryMarker.cs:54)
-OVRTelemetry:Start (int,int,long) (at Assets/Oculus/VR/Scripts/OVRTelemetry/OVRTelemetry.cs:157)
-OVRTelemetry:SendEvent (int,OVRPlugin/Qpl/ResultType) (at Assets/Oculus/VR/Scripts/OVRTelemetry/OVRTelemetry.cs:163)
-OVREditorStart:.cctor () (at Assets/Oculus/VR/Editor/OVRTelemetry/OVREditorStart.cs:35)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Assets/Oculus/VR/Scripts/OVRRuntimeSettings.cs line 172]
-
-UnityEngine.UnityException: Creating asset at path Assets/Resources/OculusRuntimeSettings.asset failed.
-  at (wrapper managed-to-native) UnityEditor.AssetDatabase.CreateAsset(UnityEngine.Object,string)
-  at OVRRuntimeSettings.GetRuntimeSettings () [0x00056] in C:\Users\jlee4\Documents\classes\spring24\650\VirtualReality\VirtualReality\Assets\Oculus\VR\Scripts\OVRRuntimeSettings.cs:172 
-  at OVRRuntimeSettings.get_Instance () [0x0000d] in C:\Users\jlee4\Documents\classes\spring24\650\VirtualReality\VirtualReality\Assets\Oculus\VR\Scripts\OVRRuntimeSettings.cs:40 
-  at OVRTelemetry.get_IsActive () [0x00000] in C:\Users\jlee4\Documents\classes\spring24\650\VirtualReality\VirtualReality\Assets\Oculus\VR\Scripts\OVRTelemetry\OVRTelemetry.cs:40 
-  at OVRTelemetry.get_Client () [0x00000] in C:\Users\jlee4\Documents\classes\spring24\650\VirtualReality\VirtualReality\Assets\Oculus\VR\Scripts\OVRTelemetry\OVRTelemetry.cs:46 
-  at OVRTelemetryMarker..ctor (System.Int32 markerId, System.Int32 instanceKey, System.Int64 timestampMs) [0x00000] in C:\Users\jlee4\Documents\classes\spring24\650\VirtualReality\VirtualReality\Assets\Oculus\VR\Scripts\OVRTelemetry\OVRTelemetryMarker.cs:54 
-  at OVRTelemetry.Start (System.Int32 markerId, System.Int32 instanceKey, System.Int64 timestampMs) [0x00000] in C:\Users\jlee4\Documents\classes\spring24\650\VirtualReality\VirtualReality\Assets\Oculus\VR\Scripts\OVRTelemetry\OVRTelemetry.cs:157 
-  at OVRTelemetry.SendEvent (System.Int32 markerId, OVRPlugin+Qpl+ResultType result) [0x00000] in C:\Users\jlee4\Documents\classes\spring24\650\VirtualReality\VirtualReality\Assets\Oculus\VR\Scripts\OVRTelemetry\OVRTelemetry.cs:163 
-  at OVREditorStart..cctor () [0x00023] in C:\Users\jlee4\Documents\classes\spring24\650\VirtualReality\VirtualReality\Assets\Oculus\VR\Editor\OVRTelemetry\OVREditorStart.cs:35 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
+Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.536 seconds
-Domain Reload Profiling: 4872ms
-	BeginReloadAssembly (286ms)
+- Finished resetting the current domain, in  0.603 seconds
+Domain Reload Profiling: 855ms
+	BeginReloadAssembly (96ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
+		DisableScriptedObjects (2ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (49ms)
-	RebuildCommonClasses (94ms)
-	RebuildNativeTypeToScriptingClass (35ms)
-	initialDomainReloadingComplete (105ms)
-	LoadAllAssembliesAndSetupDomain (2814ms)
-		LoadAssemblies (2856ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (18ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (17ms)
+	LoadAllAssembliesAndSetupDomain (114ms)
+		LoadAssemblies (155ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (131ms)
-			TypeCache.Refresh (69ms)
-				TypeCache.ScanAssembly (54ms)
-			ScanForSourceGeneratedMonoScriptInfo (36ms)
-			ResolveRequiredComponents (23ms)
-	FinalizeReload (1537ms)
+		AnalyzeDomain (7ms)
+			TypeCache.Refresh (4ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (603ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (731ms)
+		SetupLoadedEditorAssemblies (355ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (36ms)
-			SetLoadedEditorAssemblies (10ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (142ms)
-			ProcessInitializeOnLoadAttributes (498ms)
-			ProcessInitializeOnLoadMethodAttributes (37ms)
-			AfterProcessingInitializeOnLoad (8ms)
+			BeforeProcessingInitializeOnLoad (39ms)
+			ProcessInitializeOnLoadAttributes (287ms)
+			ProcessInitializeOnLoadMethodAttributes (15ms)
+			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 7.49 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 2.72 ms.
-Unloading 5003 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 137 unused Assets / (5.3 MB). Loaded Objects now: 5372.
-Memory consumption went from 193.7 MB to 188.3 MB.
-Total: 8.354300 ms (FindLiveObjects: 0.749500 ms CreateObjectMapping: 0.440200 ms MarkObjects: 4.213500 ms  DeleteObjects: 2.948000 ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.14 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3083 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (31.1 KB). Loaded Objects now: 3600.
+Memory consumption went from 129.7 MB to 129.7 MB.
+Total: 2.204200 ms (FindLiveObjects: 0.181800 ms CreateObjectMapping: 0.039200 ms MarkObjects: 1.950400 ms  DeleteObjects: 0.032100 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -304,3 +270,113 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 108.421499 seconds.
+  path: Assets/materials/New Material.mat
+  artifactKey: Guid(9f3d120752575f24aa13b3482d9fa142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/materials/New Material.mat using Guid(9f3d120752575f24aa13b3482d9fa142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1c2e008188c5c4bb742802160f04028') in 0.081995 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 184.069530 seconds.
+  path: Assets/Concrete_UP05/Materials
+  artifactKey: Guid(75eb0c32be344a8a81f8f48ea545748c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Concrete_UP05/Materials using Guid(75eb0c32be344a8a81f8f48ea545748c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '052ab7daaa994bf279dbf34676a1bff7') in 0.000447 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.482107 seconds.
+  path: Assets/Concrete_UP05/Materials/Concrete_UP5802.mat
+  artifactKey: Guid(0e4fdafda72c46678fa21b11bd2d5591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Concrete_UP05/Materials/Concrete_UP5802.mat using Guid(0e4fdafda72c46678fa21b11bd2d5591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcfcf020cca92e54b34088c5590ced0f') in 0.200836 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Concrete_UP05/Materials/Concrete_UP7178.mat
+  artifactKey: Guid(6afe969d349148d39a1d1146f6ff0471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Concrete_UP05/Materials/Concrete_UP7178.mat using Guid(6afe969d349148d39a1d1146f6ff0471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d4fc14850930fd84cc21d2a1c981b94') in 0.038676 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Concrete_UP05/Materials/Concrete_UP7417.mat
+  artifactKey: Guid(fb33f9c6a0714076baa7313d5521b0ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Concrete_UP05/Materials/Concrete_UP7417.mat using Guid(fb33f9c6a0714076baa7313d5521b0ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d451cb0dd56a7f40e8c1fcea67b6d04') in 0.041408 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 21.974946 seconds.
+  path: Assets/Concrete_UP05/Textures/DSCF5802_ao.png
+  artifactKey: Guid(8c26a42463c04c0eadd02cdf1e97f533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Concrete_UP05/Textures/DSCF5802_ao.png using Guid(8c26a42463c04c0eadd02cdf1e97f533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '668aa114bc0e4dd8e24ccfd927b9671c') in 0.026491 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Concrete_UP05/Textures/DSCF7178_displacement.png
+  artifactKey: Guid(9e1aeed77ab54cea8a65a103a9437099) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Concrete_UP05/Textures/DSCF7178_displacement.png using Guid(9e1aeed77ab54cea8a65a103a9437099) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0983fef2ac0e7955cc51a6e1023a91a3') in 0.032691 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Concrete_UP05/Textures/DSCF7173_displacement.png
+  artifactKey: Guid(3d648838e95f489ba3113a60001c08d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Concrete_UP05/Textures/DSCF7173_displacement.png using Guid(3d648838e95f489ba3113a60001c08d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af244f52cfb29c21a5ebab39064ca6f0') in 0.032427 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Concrete_UP05/Textures/DSCF7417_albedo_smoothness.png
+  artifactKey: Guid(0748e79a5ca44609be150abbf7281355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Concrete_UP05/Textures/DSCF7417_albedo_smoothness.png using Guid(0748e79a5ca44609be150abbf7281355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e099bbaeb311711678605ecee0d3283') in 0.048333 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Concrete_UP05/Textures/DSCF6107_albedo_smoothness.png
+  artifactKey: Guid(65e68e1466f94be9b4c4c2809ca5f030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Concrete_UP05/Textures/DSCF6107_albedo_smoothness.png using Guid(65e68e1466f94be9b4c4c2809ca5f030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17db3bdab00b07cde9766998f9484e9e') in 0.035985 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Concrete_UP05/Textures/DSCF7173_albedo_smoothness.png
+  artifactKey: Guid(61408e8492d54809a48226b38dcfee89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Concrete_UP05/Textures/DSCF7173_albedo_smoothness.png using Guid(61408e8492d54809a48226b38dcfee89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '693668a81629670f60183cc84140aa90') in 0.049031 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000011 seconds.
+  path: Assets/Concrete_UP05/Textures/DSCF7178_ao.png
+  artifactKey: Guid(77704eafcc2e4bba8691342b0b91d06d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Concrete_UP05/Textures/DSCF7178_ao.png using Guid(77704eafcc2e4bba8691342b0b91d06d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee5d9f31d445ba86bc0776e3ad9333f1') in 0.030537 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Concrete_UP05/Textures/DSCF5802_normal.png
+  artifactKey: Guid(e90294230fc04a2c9fb5eba311268b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Concrete_UP05/Textures/DSCF5802_normal.png using Guid(e90294230fc04a2c9fb5eba311268b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eab80a81fb7bd273af5760b5cf97a08b') in 0.028502 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
