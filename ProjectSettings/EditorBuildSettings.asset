@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/RollingWorld.unity
+    guid: b49d1b2da2061524a91099a0d041a237
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 3beed1997643ab64db94502e7ebb0c06, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c4bbb1e9a2471ba46844e52d94ca8b7c, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 7024a84b8f446874497dcc62fdb28a3c, type: 2}
