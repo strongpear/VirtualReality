@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class playermovement : MonoBehaviour
-{ 
-    public float moveSpeed = 5f;
+{   
+    private float boostTimer;
+    private bool boosting;
+    public float speed;
     public float mouseSensitivity = 2f;
 
     private Vector3 forwardDirection;
@@ -12,13 +14,37 @@ public class playermovement : MonoBehaviour
     void Start()
     {
         forwardDirection = transform.forward;
+        speed = 7;
+        boostTimer = 0;
+        boosting = false;
     }
 
     void Update()
     {
         HandleInput();
+
+        if(boosting)
+        {
+            boostTimer += Time.deltaTime;
+            if(boostTimer >= 3)
+            {
+                speed = 7;
+                boostTimer = 0;
+                boosting = false;
+            }
+        }
     }
 
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "SpeedBoost")
+        {
+            boosting = true;
+            speed = 50;
+
+        }
+    }
     void HandleInput()
     {
         // Handle player movement
@@ -30,7 +56,7 @@ public class playermovement : MonoBehaviour
         moveDirection = Vector3.ClampMagnitude(moveDirection, 1f);
 
         // Move the player
-        transform.position += moveDirection * moveSpeed * Time.deltaTime;
+        transform.position += moveDirection * speed * Time.deltaTime;
 
         // Handle mouse look
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
@@ -41,5 +67,8 @@ public class playermovement : MonoBehaviour
         // Recalculate forward direction
         forwardDirection = Vector3.ProjectOnPlane(transform.forward, transform.position.normalized).normalized;
     }
+
+
+
 
 }

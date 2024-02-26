@@ -7,6 +7,13 @@ TagManager:
   - Ground
   - worldCenter
   - World
+  - ItemTrigger
+  - pull
+  - SpeedBoost
+  - Player Detecor
+  - Player Bubble
+  - Player Detector
+  - Coin Detector
   layers:
   - Default
   - TransparentFX

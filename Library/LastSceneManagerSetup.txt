@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/_Scenes/RollingWorld.unity
+- path: Assets/_Scenes/new_world.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
