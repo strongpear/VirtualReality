@@ -1,38 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.XR;
+using Photon.Pun;
 public class playermovement : MonoBehaviour
 {   
+
+    private PhotonView myView;
+
     private float boostTimer;
     private bool boosting;
     public float speed;
     public float mouseSensitivity = 2f;
-
     private Vector3 forwardDirection;
-
+    private Transform myXrRig;
     void Start()
     {
+        myView = GetComponent<PhotonView>();
+
         forwardDirection = transform.forward;
         speed = 7;
         boostTimer = 0;
         boosting = false;
+
+        GameObject myXrOrigin = GameObject.Find("XR Origin"); 
+        myXrRig = myXrOrigin.transform;
     }
 
     void Update()
     {
-        HandleInput();
-
-        if(boosting)
+        if (myView.IsMine)
         {
-            boostTimer += Time.deltaTime;
-            if(boostTimer >= 3)
+            HandleInput();
+
+            if(boosting)
             {
-                speed = 7;
-                boostTimer = 0;
-                boosting = false;
+                boostTimer += Time.deltaTime;
+                if(boostTimer >= 3)
+                {
+                    speed = 7;
+                    boostTimer = 0;
+                    boosting = false;
+                }
             }
         }
+
     }
 
 
@@ -61,8 +73,9 @@ public class playermovement : MonoBehaviour
         // Handle mouse look
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
-        transform.Rotate(Vector3.up * mouseX);
-        Camera.main.transform.Rotate(-Vector3.right * mouseY);
+        myXrRig.Rotate(Vector3.up * mouseX);
+        //Camera.main.transform.Rotate(-Vector3.right * mouseY);
+        myXrRig.Rotate(-Vector3.right * mouseY);
 
         // Recalculate forward direction
         forwardDirection = Vector3.ProjectOnPlane(transform.forward, transform.position.normalized).normalized;

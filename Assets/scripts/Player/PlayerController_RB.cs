@@ -6,6 +6,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.XR;
+using Photon.Pun;
+
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController_RB : MonoBehaviour {
@@ -40,9 +43,23 @@ public class PlayerController_RB : MonoBehaviour {
     private bool _landed = false;
     private float _worldDistance = 0;
 
+
+
+    private PhotonView myView;
+    private float xInput;
+    private float yInput;
+    private InputData inputData;
+    private Transform myXrRig;
     // Use this for initialization
     private void Start()
     {
+        // Photon View
+        myView = GetComponent<PhotonView>();
+        // XR Origin
+        GameObject myXrOrigin = GameObject.Find("XR Origin");
+        myXrRig = myXrOrigin.transform;
+        inputData = myXrOrigin.GetComponent<InputData>();
+
         // set player details
         _playerRB = GetComponent<Rigidbody>();
         _playerMesh = transform.GetChild(0).transform;
@@ -57,29 +74,49 @@ public class PlayerController_RB : MonoBehaviour {
     // Update is called once per frame
     private void Update()
     {
+
+
         // if changing worlds
         if (_transfering)
         {
             return;
         }
 
-        // update move direction
-        _moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
 
-        // world transfer
-        if (Input.GetKeyDown("e"))
+        if (myView.IsMine)
         {
-            WorldTransfer();
-        }
 
-        // jump
-        if (Input.GetKeyDown("space"))
-        {
-            Jump();
-        }
+            myXrRig.position = _playerMesh.transform.position;
 
-        // rotate player to face the right direction
-        RotateForward();
+            // Handle Controller and Keyboard Inputs
+            if (inputData.rightController.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 movement))
+            {
+                xInput = movement.x;
+                yInput = movement.y;
+            }
+            else
+            {
+                xInput = Input.GetAxis("Horizontal");
+                yInput = Input.GetAxis("Vertical");
+            }  
+            // update move direction
+            _moveDirection = new Vector3(xInput, 0, yInput).normalized;
+
+            // world transfer
+            if (Input.GetKeyDown("e"))
+            {
+                WorldTransfer();
+            }
+
+            // jump
+            if (Input.GetKeyDown("space"))
+            {
+                Jump();
+            }
+
+            // rotate player to face the right direction
+            RotateForward();
+        }
     }
 
     // FixedUpdate is called every fixed framerate frame
@@ -92,6 +129,7 @@ public class PlayerController_RB : MonoBehaviour {
         }
         // update movement
         _playerRB.MovePosition(_playerRB.position + transform.TransformDirection(_moveDirection * speed * Time.deltaTime));
+        //_playerRB.AddForce(xInput * speed, 0, yInput * speed);
     }
 
     /// <summary>
