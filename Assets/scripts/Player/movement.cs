@@ -20,7 +20,7 @@ public class movement : MonoBehaviour
     private Rigidbody myRB;
     private Transform myXrRig;
 
-    
+    private Transform xrCamera;
     private Vector3 headsetForward;
     void Start()
     {
@@ -31,6 +31,7 @@ public class movement : MonoBehaviour
         
         GameObject myXrOrigin = GameObject.Find("XR Origin"); 
         myXrRig = myXrOrigin.transform;
+        //xrCamera = myXrRig.GetChild(0).gameObject.GetChild(0).cameraGameObject.transform;
         inputData = myXrOrigin.GetComponent<InputData>();   
     }
 
@@ -60,13 +61,28 @@ public class movement : MonoBehaviour
             {
                 xInput = movement.x;
                 yInput = movement.y;
-                headsetForward = myXrRig.forward;
+                // headsetForward = myXrRig.forward;
+                // headsetForward = Camera.main.transform.forward;
+                // headsetForward.y = 0f; // Ensure movement is horizontal only
             }
         }
     }
 
     private void FixedUpdate()
     {
+
+        headsetForward = Vector3.ProjectOnPlane(myXrRig.transform.forward, myXrRig.transform.position.normalized).normalized;
+        // Calculate movement direction based on player orientation
+        Vector3 moveDirection = transform.right * xInput + headsetForward * yInput;
+        moveDirection = Vector3.ClampMagnitude(moveDirection, 1f);
+
+        // Move the player
+        transform.position += moveDirection * speed * Time.deltaTime;
+
+
+        // Vector3 movementDirection = xrCamera.forward * yInput + xrCamera.right * xInput;
+        // movementDirection.y = 0; // Ensure movement is horizontal only
+        // myRB.AddForce(movementDirection.normalized * speed, ForceMode.VelocityChange);
         myRB.AddForce(xInput * speed, 0, yInput * speed);
         //transform.Translate(headsetForward * speed * Time.deltaTime * yInput);
     }

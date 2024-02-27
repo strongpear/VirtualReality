@@ -78,7 +78,7 @@ public class playermovement : MonoBehaviour
         myXrRig.Rotate(-Vector3.right * mouseY);
 
         // Recalculate forward direction
-        forwardDirection = Vector3.ProjectOnPlane(transform.forward, transform.position.normalized).normalized;
+        forwardDirection = Vector3.ProjectOnPlane(myXrRig.transform.forward, myXrRig.transform.position.normalized).normalized;
     }
 
 
