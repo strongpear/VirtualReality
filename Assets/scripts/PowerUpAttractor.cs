@@ -6,13 +6,15 @@ public class PowerUpAttractor : MonoBehaviour
     public float attractionForce = 5f;
     public float powerUpDuration = 5f;
     private bool isAttracting = false;
-
+    private bool collidedPlayerIt;
+    private int collidedPlayerNumber;
     private void OnCollisionEnter(Collision other)
     {
         Debug.Log("Collided with Pull Powerup");
         if (other.gameObject.CompareTag("Player"))
-        {
-            
+        {           
+            collidedPlayerNumber = other.gameObject.GetComponent<CollisionManager>().playerNumber;
+            collidedPlayerIt = other.gameObject.GetComponent<CollisionManager>().isIt;
             isAttracting = true;
             GetComponent<Renderer>().enabled = false; // Hide the power-up when collected
             Invoke("StopAttracting", powerUpDuration); // Stop attracting after the duration
@@ -27,15 +29,38 @@ public class PowerUpAttractor : MonoBehaviour
 
             foreach (Collider col in colliders)
             {
-
-                if (col.CompareTag("Attractable"))
+                if (col.CompareTag("Player"))
                 {
-                    Rigidbody rb = col.GetComponent<Rigidbody>();
-                    if (rb != null)
+                    CollisionManager colCollisionManager = col.GetComponent<CollisionManager>();
+
+                    // If player is the one who hit the thing, don't affect them
+                    if (colCollisionManager.playerNumber == collidedPlayerNumber)
                     {
-                        Vector3 direction = transform.position - col.transform.position;
-                        rb.AddForce(direction.normalized * attractionForce, ForceMode.Force);
+                        continue;
                     }
+
+                    bool colPlayerIt = colCollisionManager.isIt;
+                    Rigidbody rb = col.GetComponent<Rigidbody>();
+                    Vector3 direction = transform.position - col.transform.position;
+
+                    // If the it player tags it, everybody else gets dragged closer
+                    if (collidedPlayerIt)
+                    {
+                        if (rb != null)
+                        {
+                            rb.AddForce(direction.normalized * attractionForce, ForceMode.Force);
+                        }
+                    }
+
+                    // If a chaser tags the power up and a player is close, they get pushed away
+                    else if (!collidedPlayerIt && colPlayerIt)
+                    {
+                        if (rb != null)
+                        {
+                            rb.AddForce(-(direction.normalized) * attractionForce, ForceMode.Force);
+                        }
+                    }
+
                 }
             }
         }

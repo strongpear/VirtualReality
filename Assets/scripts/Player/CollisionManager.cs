@@ -36,7 +36,7 @@ public class CollisionManager : MonoBehaviour
         if (playerNumber <= 1)
         {
             Debug.Log("Player " + playerNumber + "is it!");
-            isIt = true;
+            isIt = false;
             lifeCounter.UpdatePlayerItText(playerNumber.ToString());
         }
         else
