@@ -18978,6 +18978,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   mouseSensitivity: 2
+  teleportMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!222 &5559474577019417571
 CanvasRenderer:
   m_ObjectHideFlags: 0
