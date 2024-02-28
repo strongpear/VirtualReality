@@ -43,6 +43,22 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Debug.Log("New Player Joined Room");
         base.OnPlayerEnteredRoom(newPlayer);
     }
+
+    public int GetPlayerCount()
+    {
+        if (PhotonNetwork.InRoom)
+        {
+            Room currentRoom = PhotonNetwork.CurrentRoom;
+            int playerCount = currentRoom.PlayerCount;
+            Debug.Log("Number of Players: " + playerCount);
+            return playerCount;
+        }
+        else
+        {
+            Debug.Log("Not in Room");
+            return 2;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
