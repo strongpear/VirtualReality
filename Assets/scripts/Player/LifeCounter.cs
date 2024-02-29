@@ -9,6 +9,7 @@ public class LifeCounter : MonoBehaviour
     public int currentLives;
     public TextMeshProUGUI livesText;
     public TextMeshProUGUI playerIt;
+    public TextMeshProUGUI timerText;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,11 @@ public class LifeCounter : MonoBehaviour
     }
     public void UpdatePlayerItText(string player)
     {
-        Debug.Log("Updating who is It");
-        playerIt.text = "It Player: " + player;
+        Debug.Log("Updating Player Number");
+        playerIt.text = "Player: " + player;
+    }
+    public void UpdateTimer(int timer)
+    {
+        timerText.text = "Timer: " + timer.ToString();
     }
 }

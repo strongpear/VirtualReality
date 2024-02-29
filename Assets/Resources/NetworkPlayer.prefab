@@ -19005,6 +19005,7 @@ MonoBehaviour:
   maxLives: 3
   currentLives: 0
   playerNumber: 0
+  timer: 0
 --- !u!1 &1697377946764366
 GameObject:
   m_ObjectHideFlags: 0

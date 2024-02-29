@@ -13,6 +13,7 @@ public class playermovement : MonoBehaviour
     public float speed;
     public float mouseSensitivity = 2f;
     private Vector3 forwardDirection;
+    private Vector3 rightDirection;
     private Transform myXrRig;
     
     private float teleportDistance = 5f;
@@ -121,7 +122,7 @@ public class playermovement : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
 
         // Calculate movement direction based on player orientation
-        Vector3 moveDirection = transform.right * moveHorizontal + forwardDirection * moveVertical;
+        Vector3 moveDirection = rightDirection * moveHorizontal + forwardDirection * moveVertical;
         moveDirection = Vector3.ClampMagnitude(moveDirection, 1f);
 
         // Move the player
@@ -136,6 +137,7 @@ public class playermovement : MonoBehaviour
 
         // Recalculate forward direction
         forwardDirection = Vector3.ProjectOnPlane(myXrRig.transform.forward, myXrRig.transform.position.normalized).normalized;
+        rightDirection = Vector3.ProjectOnPlane(myXrRig.transform.right, myXrRig.transform.position.normalized).normalized;
     }
 
 
