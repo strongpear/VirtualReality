@@ -13,7 +13,7 @@ public class movement : MonoBehaviour
     private float xInput;
     private float yInput;
 
-    public float speed = 3f;
+    public float speed = 5f;
 
 
     private InputData inputData;

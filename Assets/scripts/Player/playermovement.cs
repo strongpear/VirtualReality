@@ -11,6 +11,8 @@ public class playermovement : MonoBehaviour
     private float boostTimer;
     private bool boosting;
     public float speed;
+    static public float originalSpeed = 5f;
+    static public float boostedSpeed = 30f;
     public float mouseSensitivity = 2f;
     private Vector3 forwardDirection;
     private Vector3 rightDirection;
@@ -19,22 +21,23 @@ public class playermovement : MonoBehaviour
     private float teleportDistance = 5f;
     private int countTeleportPowerUp;
     public LayerMask teleportMask;
-
+    public movement movement;
     private Vector3 teleportDestination;
 
     void Start()
     {
         myView = GetComponent<PhotonView>();
-
+        movement = GetComponent<movement>();
         countTeleportPowerUp = 0;
         forwardDirection = transform.forward;
-        speed = 7;
+        speed = originalSpeed;
         boostTimer = 0;
         boosting = false;
 
         GameObject myXrOrigin = GameObject.Find("XR Origin"); 
         myXrRig = myXrOrigin.transform;
         inputData = myXrOrigin.GetComponent<InputData>();
+
     }
 
     void Update()
@@ -49,7 +52,8 @@ public class playermovement : MonoBehaviour
                 boostTimer += Time.deltaTime;
                 if(boostTimer >= 3)
                 {
-                    speed = 7;
+                    movement.speed = originalSpeed;
+                    speed = originalSpeed;
                     boostTimer = 0;
                     boosting = false;
                 }
@@ -108,11 +112,13 @@ public class playermovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "SpeedBoost")
+        if(other.gameObject.tag == "SpeedBoost")
         {
+            Debug.Log("Speed Boosting");
             boosting = true;
-            speed = 50;
-
+            movement.speed = boostedSpeed;
+            speed = boostedSpeed;
+            Destroy(other.gameObject);
         }
     }
     void HandleInput()
