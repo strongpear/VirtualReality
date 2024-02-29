@@ -19,6 +19,8 @@ public class playermovement : MonoBehaviour
     private int countTeleportPowerUp;
     public LayerMask teleportMask;
 
+    private Vector3 teleportDestination;
+
     void Start()
     {
         myView = GetComponent<PhotonView>();
@@ -51,13 +53,19 @@ public class playermovement : MonoBehaviour
                     boosting = false;
                 }
             }
-            //if (Input.GetKeyDown(KeyCode.Space) || (inputData.rightController.TryGetFeatureValue(CommonUsages.primaryButton, out primaryButtonState) && primaryButtonState))
+            //if (Input.GetKeyDown(KeyCode.Space) || (inputData.rightController.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryButtonState) && primaryButtonState))
 
             // Teleportation
-            if (countTeleportPowerUp >= 1 && (Input.GetKeyDown(KeyCode.Space)))
+            if (countTeleportPowerUp >= 1 && Input.GetKeyDown(KeyCode.Space))
             {
-                TeleportForward();
-                Debug.Log("Teleporting Player Forward");
+                TeleportForward(true);
+                Debug.Log("Teleporting Keyboard Player Forward");
+                countTeleportPowerUp--;
+            }
+            else if (countTeleportPowerUp >= 1 && (inputData.rightController.TryGetFeatureValue(CommonUsages.trigger, out float triggerState) && triggerState > 0.3))
+            {
+                TeleportForward(false);
+                Debug.Log("Teleporting VR Player Forward");
                 countTeleportPowerUp--;
             }
         }
@@ -65,10 +73,17 @@ public class playermovement : MonoBehaviour
     }
 
     // Function to handle teleporting forward
-    void TeleportForward()
-    {
-        // Calculate the teleport destination
-        Vector3 teleportDestination = transform.position + transform.forward * teleportDistance;
+    void TeleportForward(bool isKeyboard)
+    { 
+        if(isKeyboard)
+        {
+            // Calculate the teleport destination
+            teleportDestination = transform.position + transform.forward * teleportDistance;
+        }
+        else
+        {
+            teleportDestination = transform.position + Camera.main.transform.forward * teleportDistance;
+        }
 
         // Perform a raycast to check if the teleport destination is valid
         RaycastHit hit;

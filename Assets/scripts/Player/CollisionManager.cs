@@ -7,7 +7,7 @@ using Photon.Realtime;
 
 public class CollisionManager : MonoBehaviour
 {
-    public bool isIt;
+    public bool isIt = false;
 
     public int maxLives = 3;
     public int currentLives;
@@ -36,12 +36,12 @@ public class CollisionManager : MonoBehaviour
         if (playerNumber <= 1)
         {
             Debug.Log("Player " + playerNumber + "is it!");
-            isIt = false;
+            isIt = true;
             lifeCounter.UpdatePlayerItText(playerNumber.ToString());
         }
         else
         {
-            isIt = false;
+            lifeCounter.UpdatePlayerItText(playerNumber.ToString());
         }
 
     }
@@ -83,7 +83,7 @@ public class CollisionManager : MonoBehaviour
                 CollisionManager otherPlayerCollisionManager = collidedPlayer.GetComponent<CollisionManager>();
                 Debug.Log("Transferring the It to player" + otherPlayerCollisionManager.playerNumber);
                 isIt = false;
-                
+
                 // Teleport player before making them it
                 otherPlayerCollisionManager.TeleportToRandomLocation();
                 timer = 0f;
@@ -103,7 +103,9 @@ public class CollisionManager : MonoBehaviour
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(1);
         
+        // Make other person it
         otherPlayerCollisionManager.isIt = true;
+
         //After we have waited 5 seconds print the time again.
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
     }
