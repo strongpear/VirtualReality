@@ -22,6 +22,7 @@ public class movement : MonoBehaviour
 
     private Transform xrCamera;
     private Vector3 headsetForward;
+    private Vector3 forwardDirection;
     void Start()
     {
         myView = GetComponent<PhotonView>();
@@ -61,6 +62,23 @@ public class movement : MonoBehaviour
             {
                 xInput = movement.x;
                 yInput = movement.y;
+
+
+                // Handle player movement
+                float moveHorizontal = xInput;
+                float moveVertical = yInput;
+
+                // Calculate movement direction based on player orientation
+                Vector3 moveDirection = Camera.main.transform.right * moveHorizontal + forwardDirection * moveVertical;
+                moveDirection = Vector3.ClampMagnitude(moveDirection, 1f);
+
+                // Move the player
+                transform.position += moveDirection * speed * Time.deltaTime;
+
+                // Recalculate forward direction
+                forwardDirection = Vector3.ProjectOnPlane(Camera.main.transform.forward, Camera.main.transform.position.normalized).normalized;
+
+
                 // headsetForward = myXrRig.forward;
                 // headsetForward = Camera.main.transform.forward;
                 // headsetForward.y = 0f; // Ensure movement is horizontal only
@@ -68,22 +86,22 @@ public class movement : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
+    // private void FixedUpdate()
+    // {
 
-        headsetForward = Vector3.ProjectOnPlane(myXrRig.transform.forward, myXrRig.transform.position.normalized).normalized;
-        // Calculate movement direction based on player orientation
-        Vector3 moveDirection = transform.right * xInput + headsetForward * yInput;
-        moveDirection = Vector3.ClampMagnitude(moveDirection, 1f);
+    //     headsetForward = Vector3.ProjectOnPlane(myXrRig.transform.forward, myXrRig.transform.position.normalized).normalized;
+    //     // Calculate movement direction based on player orientation
+    //     Vector3 moveDirection = transform.right * xInput + headsetForward * yInput;
+    //     moveDirection = Vector3.ClampMagnitude(moveDirection, 1f);
 
-        // Move the player
-        transform.position += moveDirection * speed * Time.deltaTime;
+    //     // Move the player
+    //     transform.position += moveDirection * speed * Time.deltaTime;
 
 
-        // Vector3 movementDirection = xrCamera.forward * yInput + xrCamera.right * xInput;
-        // movementDirection.y = 0; // Ensure movement is horizontal only
-        // myRB.AddForce(movementDirection.normalized * speed, ForceMode.VelocityChange);
-        myRB.AddForce(xInput * speed, 0, yInput * speed);
-        //transform.Translate(headsetForward * speed * Time.deltaTime * yInput);
-    }
+    //     // Vector3 movementDirection = xrCamera.forward * yInput + xrCamera.right * xInput;
+    //     // movementDirection.y = 0; // Ensure movement is horizontal only
+    //     // myRB.AddForce(movementDirection.normalized * speed, ForceMode.VelocityChange);
+    //     myRB.AddForce(xInput * speed, 0, yInput * speed);
+    //     //transform.Translate(headsetForward * speed * Time.deltaTime * yInput);
+    // }
 }
