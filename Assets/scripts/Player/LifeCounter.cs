@@ -10,6 +10,7 @@ public class LifeCounter : MonoBehaviour
     public TextMeshProUGUI livesText;
     public TextMeshProUGUI playerIt;
     public TextMeshProUGUI timerText;
+    public TextMeshProUGUI endGameText;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,5 +39,9 @@ public class LifeCounter : MonoBehaviour
     public void UpdateTimer(int timer)
     {
         timerText.text = "Timer: " + timer.ToString();
+    }
+    public void UpdateEndGame()
+    {
+        endGameText.text = "Game Over";
     }
 }

@@ -18,8 +18,9 @@ public class CollisionManager : MonoBehaviour
     LifeCounter lifeCounter;
     NetworkManager networkManager;
     RandomPointManager randomPointManager;
+    ItGameManager itGameManager;
     public float timer = 0f;
-    private float lifeTimer = 10f; // How long before losing a life
+    private float lifeTimer = 120f; // How long before losing a life
     // GameManager gameManager;
 
     // Start is called before the first frame update
@@ -32,7 +33,7 @@ public class CollisionManager : MonoBehaviour
         lifeManager = GameObject.Find("LifeManager");
         lifeCounter = lifeManager.GetComponent<LifeCounter>();
         randomPointManager = GameObject.Find("RandomPointManager").GetComponent<RandomPointManager>();
-
+        itGameManager = GameObject.Find("ItGameManager").GetComponent<ItGameManager>();
         
 
         networkManager = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
@@ -47,10 +48,12 @@ public class CollisionManager : MonoBehaviour
                 Debug.Log("Player " + playerNumber + "is it!");
                 isIt = true;
                 lifeCounter.UpdatePlayerItText(playerNumber.ToString());
+                //itGameManager.it_Dict.Add(playerNumber, true);
             }
             else
             {
                 lifeCounter.UpdatePlayerItText(playerNumber.ToString());
+                //itGameManager.it_Dict.Add(playerNumber, false);
             }
         }
 
@@ -76,10 +79,28 @@ public class CollisionManager : MonoBehaviour
             
             if (currentLives <= 0)
             {
-                //HandleEndGame();
+                currentLives = 0;
+                timer = 0;
+                HandleEndGame();
             }
+            lifeCounter.UpdateTimer((int)lifeTimer - (int)timer);
+        }        
+    }
+
+    public void HandleEndGame()
+    {
+        lifeCounter.UpdateEndGame();
+    }
+    public int GetPlayerNumber()
+    {
+        if (myView.IsMine)
+        {
+            return playerNumber;
         }
-        lifeCounter.UpdateTimer((int)lifeTimer - (int)timer);
+        else
+        {
+            return -1;
+        }
     }
     public void TeleportToRandomLocation()
     {
@@ -121,11 +142,14 @@ public class CollisionManager : MonoBehaviour
                 if (isIt) // If I am it, pass it to collided player
                 {
                     
-                    isIt = false;
+                    // isIt = false;
+                    StartCoroutine(NotIt());
                     timer = 0f;     
                 }   
                 else
                 {
+                    currentLives--;
+                    lifeCounter.UpdateLivesText(currentLives);
                     TeleportToRandomLocation();
                     StartCoroutine(WaitOneSecondCoroutine()); 
                     
@@ -134,12 +158,41 @@ public class CollisionManager : MonoBehaviour
 
         }
     }
+    // Function to return if a player is it
+    public int IsIt()
+    {
+        if (myView.IsMine)
+        {
+            if (isIt)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        
+        else
+        {
+            return -1;
+        }
+    }
+
 
     // private void OnCollisionEnter(Collision collision)
     // {
     //     gameManager.HandleCollision(GetComponentInChildren<Collider>(), collision);
     // }
-
+    IEnumerator NotIt()
+    {
+        yield return new WaitForSeconds(0.1f);
+        if(myView.IsMine)
+        {
+            //itGameManager.it_Dict[playerNumber] = false;
+            isIt = false;
+        }
+    }
     IEnumerator WaitOneSecondCoroutine()
     {
         // This is called when I teleport and make myself it
@@ -152,6 +205,8 @@ public class CollisionManager : MonoBehaviour
         // Make myself it
         if (myView.IsMine)
         {
+            //itGameManager.it_Dict[playerNumber] = true;
+
             isIt = true;
         }
 

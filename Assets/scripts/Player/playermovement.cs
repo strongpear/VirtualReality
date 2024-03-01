@@ -76,7 +76,7 @@ public class playermovement : MonoBehaviour
         }
 
     }
-
+    
     // Function to handle teleporting forward
     void TeleportForward(bool isKeyboard)
     { 
