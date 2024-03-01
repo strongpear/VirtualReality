@@ -1,0 +1,26 @@
+newmtl Pool
+Ns 2.5
+Ka 0 0 0
+Kd 0.184314 0.909804 1
+Ks 0.87451 0.87451 0.87451
+d 1
+newmtl Padding
+Ns 10
+Ka 0 0 0
+Kd 0.105882 0.113725 0.145098
+Ks 0.588235 0.588235 0.588235
+d 1
+newmtl Water
+Ns 10
+Ka 0 0 0
+Kd 1 1 1
+Ks 0.941176 0.941176 0.941176
+map_Kd apcgninjaWarriorWater.jpg
+map_Bump apcgninjaWarriorWaterbump.jpg
+d 0.2
+newmtl Wall
+Ns 10
+Ka 0 0 0
+Kd 0.105882 0.113725 0.145098
+Ks 0.588235 0.588235 0.588235
+d 1

@@ -1,0 +1,12 @@
+newmtl Color1
+Ns 2.5
+Ka 1 0 0
+Kd 0 0 0
+Ks 0.87451 0.87451 0.87451
+d 1
+newmtl Color2
+Ns 2.5
+Ka 0 0 0
+Kd 0 0 0
+Ks 0.87451 0.87451 0.87451
+d 1

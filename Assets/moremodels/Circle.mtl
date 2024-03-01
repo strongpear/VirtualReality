@@ -1,7 +1,6 @@
 newmtl Color1
 Ns 2.5
 Ka 0 0 0
-Kd 1 1 1
+Kd 1 0 0
 Ks 0.87451 0.87451 0.87451
-map_Kd apcgNinjaramp.jpg
 d 1

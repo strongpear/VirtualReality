@@ -1,0 +1,32 @@
+newmtl Steps
+Ns 10
+Ka 0 0 0
+Kd 0.8 0.8 0.8
+Ks 0.87451 0.87451 0.87451
+map_Kd apcgESFloor.jpg
+map_Bump apcgESFloor.jpg
+d 1
+newmtl Details
+Ns 5
+Ka 0 0 0
+Kd 0.87451 0.87451 0.87451
+Ks 0.827451 0.827451 0.827451
+d 1
+newmtl Metal
+Ns 5
+Ka 0 0 0
+Kd 0.87451 0.87451 0.87451
+Ks 0.827451 0.827451 0.827451
+d 1
+newmtl PaintedMetal
+Ns 10
+Ka 0 0 0
+Kd 1 1 1
+Ks 0.6 0.6 0.6
+d 1
+newmtl Plastic
+Ns 10
+Ka 0 0 0
+Kd 0.945098 0.94902 0.988235
+Ks 1 1 1
+d 1
